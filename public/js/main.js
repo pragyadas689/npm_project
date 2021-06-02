@@ -17,7 +17,7 @@ const getInfo = async(event) =>{
        datahide.classList.add('data_hide');
     }else{
         try{
-            let url = `http://api.openweathermap.org/data/2.5/weather?q=${cityVal}&appid=f34256a6f78eac9f96b277eafd527e87`;
+            let url = `https://api.openweathermap.org/data/2.5/weather?q=${cityVal}&appid=f34256a6f78eac9f96b277eafd527e87`;
             let response = await fetch(url);
             const data = await response.json();
             let arrData = [data];
@@ -45,7 +45,7 @@ const getInfo = async(event) =>{
             
              }catch{
             
-                    city_name.innerText = 'Please Enter City Name Properly';
+                       city_name.innerText = 'Please Enter City Name Properly';
                        datahide.classList.add('data_hide');
                     
                 }
